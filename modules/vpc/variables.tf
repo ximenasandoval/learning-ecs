@@ -1,3 +1,14 @@
+variable "create_bastion_host" {
+  description = "Bool to create bastion host in VPC, defaults to true"
+  type        = bool
+  default     = true
+}
+
+variable "name" {
+  description = "VPC name"
+  type        = string
+}
+
 variable "private_subnet_availability_zone" {
   description = "AZ to place private subnet in"
   type        = string
