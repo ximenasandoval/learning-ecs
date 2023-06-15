@@ -46,7 +46,7 @@ resource "aws_instance" "bastion" {
 
 resource "aws_security_group" "bastion-security-group" {
   count       = var.create_bastion_host ? 1 : 0
-  name        = "bastion_host_sg"
+  name        = "${var.name}-bastion_host_sg"
   description = "Bastion host Security Group"
   vpc_id      = aws_vpc.vpc.id
 
@@ -59,6 +59,7 @@ resource "aws_security_group" "bastion-security-group" {
   }
 
   tags = {
+    Name          = "${var.name}-bastion_host_sg"
     resource_type = "AWS Security Group"
   }
 }
