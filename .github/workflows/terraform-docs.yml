@@ -5,7 +5,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         ref: ${{ github.event.pull_request.head.ref }}
     - name: Render terraform docs inside the README.md and push changes back to PR branch
@@ -13,5 +13,5 @@ jobs:
       with:
         tf_docs_working_dir: modules/vpc,modules/ecs-cluster
         tf_docs_output_file: README.md
-        tf_docs_output_method: inject
+        tf_docs_output_method: replace
         tf_docs_git_push: 'true'
