@@ -24,4 +24,5 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
+| alb | ALB used created for cluster |
 | ecs-cluster | ECS cluster name |

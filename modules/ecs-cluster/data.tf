@@ -18,5 +18,5 @@ data "aws_ami" "amazon_ecs_optimized_ami" {
 }
 
 data "aws_vpc" "vpc" {
-  id = "${var.vpc_id}"
+  id = var.vpc_id
 }
