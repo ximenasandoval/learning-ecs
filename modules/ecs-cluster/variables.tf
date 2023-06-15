@@ -9,8 +9,23 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "subnet_id" {
+variable "private_subnet_id" {
   description = "Subnet id to place the ECS instances in"
+  type        = string
+}
+
+variable "public_subnet_id" {
+  description = "Subnet id to place the ALB"
+  type        = string
+}
+
+variable "public_security_group" {
+  description = "Public security group to use for ALB"
+  type        = string
+}
+
+variable "private_security_group" {
+  description = "Private security group to use for ALB"
   type        = string
 }
 
