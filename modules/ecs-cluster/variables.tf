@@ -10,11 +10,11 @@ variable "instance_type" {
 }
 
 variable "subnet_id" {
-  description = ""
+  description = "Subnet id to place the ECS instances in"
   type        = string
 }
 
 variable "vpc_id" {
-  description = "VPC id to place the instances in"
+  description = "VPC id to place the ECS instances in"
   type        = string
 }
