@@ -1,11 +1,11 @@
 output "private_security_group" {
   description = "ID of private security group in VPC"
-  value = aws_security_group.private_security_group.id
+  value       = aws_security_group.private_security_group.id
 }
 
 output "public_security_group" {
   description = "ID of public security group in VPC"
-  value = aws_security_group.public_security_group.id
+  value       = aws_security_group.public_security_group.id
 }
 
 output "vpc_public_subnet" {
